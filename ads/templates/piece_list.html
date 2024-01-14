@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listes des pièces</title>
+</head>
+<body>
+    <h1>Listes des pièces</h1>
+    <table>
+    <thead>
+         <tr>
+             <th>Ref</th>
+             <th>Largeur</th>
+             <th>Longeur</th>
+             <th>Hauteur</th>
+         </tr>
+    </thead>
+    <tbody>
+        {%for piece in pieces%}
+            <tr>
+                <td>{{piece.references}}</td>
+                <td>{{piece.width}}</td>
+                <td>{{piece.length}}</td>
+                <td>{{piece.height}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</body>
+</html>

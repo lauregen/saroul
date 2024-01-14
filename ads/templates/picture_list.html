@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Description des pièces</title>
+</head>
+<body>
+    <h1>Description des pièces</h1>
+    <table>
+        {%for picture in pictures%}
+            <tr>
+                <td>{{picture.name}}</td>
+            </tr>
+            <tr>
+                <td>{{filename.name}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

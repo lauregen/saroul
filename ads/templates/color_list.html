@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listes des couleurs</title>
+</head>
+<body>
+    <h1>Listes des couleurs</h1>
+    <table>
+        {%for color in colors%}
+            <tr>
+                <th scope="col"></th>
+                <td>{{color.name}}</td>
+                <th scope="row"></th>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

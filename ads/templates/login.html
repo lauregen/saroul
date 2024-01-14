@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <head>
+    <title>Connexion</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<style>
+    body {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+
+    }
+
+    form{
+        width: 200px;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        background-image: radial-gradient(circle at 40.93% 83.85%, #daffda 0, #cdffd8 12.5%, #bffbd7 25%, #aff7d6 37.5%, #9df2d5 50%, #8aedd6 62.5%, #76e9d8 75%, #61e4db 87.5%, #4ae0df 100%);
+
+    }
+image-container {
+  position: relative;
+  text-align: center;
+}
+ h2{
+     margin-bottom: 50px;
+     text-align: center;
+ }
+
+</style>
+        <body>
+            <div class="container">
+                <h2>Connexion</h2>
+                    <div class="row justify-content-end col-4">
+            {% if error_message %}
+                <p style="color: red;">{{ error_message }}</p>
+            {% endif %}
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" name="username" required><br>
+
+                <label for="password">Mot de passe:
+                <input type="password" id="password" name="password" required><br>
+                <div class="password-icon">
+                    <i data-feather="eye"id="show-password"></i>
+                    <i data-feather="eye-off" id="hide-password" style="display:none;"></i>
+                </div>
+                </label>
+
+
+
+
+
+                <button type="submit">Connexion</button>
+            </form>
+            <a href="#" class="forgot-password">Forgot the password?</a>
+            <a href="#" id="create-user">Créer un compte?</a>
+            <form class="create-user-form">
+                {{ user_form.as_p}}
+                <button type="submit">Créer utilisateur</button>
+            </form>
+                </div>
+
+            </div>
+ <script>
+        $(document).ready(function() {
+            // Cacher le formulaire de création d'utilisateur au chargement de la page
+            $('.create-user-form').hide();
+
+            // Gérer le clic sur le lien "Créer un compte?"
+            $('#create-user').click(function() {
+                // Basculez la visibilité du formulaire de création d'utilisateur
+                $('.create-user-form').toggle();
+            });
+        });
+    </script>
+        </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listes des matières</title>
+</head>
+<body>
+    <h1>Listes des matières</h1>
+    <table>
+        {%for matter in matters%}
+            <tr>
+                <td>{{matter.name}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

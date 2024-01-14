@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marques des pièces automobiles</title>
+</head>
+<body>
+    <h1>Marques des pièces automobiles</h1>
+    <table>
+        {%for brand in brands%}
+            <tr>
+                <td>{{brand.name}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

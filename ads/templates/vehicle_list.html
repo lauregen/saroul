@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listes des véhicules</title>
+</head>
+<style>
+
+img {
+    opacity: 0.4;
+    width: 100%;
+}
+
+
+</style>
+<body>
+ <img src="https://www.groupama.fr/cms/images/68nuITGpoYFLLNPAFdrPDr/7c5e090fe9444baa0c8deddf5b9231f6/Vendre-voiture-casse-1440.webp" alt="casse-auto">
+    <h1>Listes des véhicules</h1>
+    <table>
+        {%for vehicle in vehicles%}
+            <tr>
+                <td>{{ vehicle.brand }}</td>
+                <td>{{vehicle.model}}</td>
+                <td>{{vehicle.year}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
