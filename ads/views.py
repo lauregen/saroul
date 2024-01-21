@@ -47,7 +47,6 @@ def picture_list(request):
     pictures = Picture.objects.all()
     return render(request, 'picture_list.html', {'pictures':pictures})
 
-@login_required(login_url='login')
 def ad_list(request):
     ads = Ad.objects.all()
     return render(request, 'ad_list.html',{'ads':ads} )
@@ -57,6 +56,7 @@ def ad_detail(request,ad_id):
     return render(request, 'ad_detail.html', {'ad':ad})
 
 
+@login_required(login_url='login')
 def vehicle_form(request):
     if request.method == "POST":
         form = VehicleForm(request.POST)
@@ -69,6 +69,7 @@ def vehicle_form(request):
         form = VehicleForm().as_p()
         return render(request, 'vehicle_form.html', {'form':form})
 
+@login_required(login_url='login')
 def piece_form(request):
     if request.method == "POST":
         form = PieceForm(request.POST)
@@ -81,6 +82,7 @@ def piece_form(request):
             form = PieceForm().as_p()
             return render(request, 'piece_form.html', {'form':form})
 
+@login_required(login_url='login')
 def brand_form(request):
     if request.method == "POST":
         form = BrandForm(request.POST)
@@ -93,6 +95,7 @@ def brand_form(request):
         form = BrandForm().as_p()
         return render(request, 'brand_form.html', {'form': form})
 
+@login_required(login_url='login')
 def matter_form(request):
         if request.method == "POST":
             form = MatterForm(request.POST)
@@ -105,6 +108,7 @@ def matter_form(request):
             form = MatterForm().as_p()
             return render(request, 'matter_form.html', {'form': form})
 
+@login_required(login_url='login')
 def color_form(request):
         if request.method == "POST":
             form = ColorForm(request.POST)
@@ -117,6 +121,7 @@ def color_form(request):
             form = ColorForm().as_p()
             return render(request, 'color_form.html', {'form': form})
 
+@login_required(login_url='login')
 def picture_form(request):
         if request.method == "POST":
             form = PictureForm(request.POST)
@@ -129,7 +134,7 @@ def picture_form(request):
             form = PictureForm().as_p()
             return render(request, 'picture_form.html', {'form': form})
 
-
+@login_required(login_url='login')
 def ad_form(request):
     if request.method == "POST":
         form = AdForm(request.POST)
@@ -142,6 +147,7 @@ def ad_form(request):
         form = AdForm().as_p()
         return render(request, 'ad_form.html', {'form': form})
 
+@login_required(login_url='login')
 def category_form(request):
     if request.method == "POST":
         form = CategoryForm(request.POST)

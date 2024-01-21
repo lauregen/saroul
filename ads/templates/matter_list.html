@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Listes des matières</title>
-</head>
+<html>
+{% include 'head.html' %}
 <body>
+{% include 'nav.html' %}
     <h1>Listes des matières</h1>
     <table>
         {%for matter in matters%}

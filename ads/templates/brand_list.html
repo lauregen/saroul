@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Marques des pièces automobiles</title>
-</head>
+<html>
+{% include 'head.html' %}
 <body>
+{% include 'nav.html' %}
     <h1>Marques des pièces automobiles</h1>
     <table>
         {%for brand in brands%}
