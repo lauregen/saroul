@@ -1,0 +1,64 @@
+ /* Style pour positionner le logo en haut à gauche */
+     logo {
+         position: fixed;
+         top: 10px; /* Ajustez la valeur en fonction de votre mise en page */
+         left: 10px; /* Ajustez la valeur en fonction de votre mise en page */
+         z-index: 1000; /* Assurez-vous que le logo est au-dessus du reste du contenu */
+     }
+
+    nav{
+    background: #000; /* fond */
+    color: #fff;
+    padding: 0.5em 0;
+    position: fixed; /* Le menu a une position fixe lors de la descente dans la page */
+    text-align: center; /* alignement du texte centré */
+    width: 100%; /* largeur 100% de la fenêtre */
+    top: 0; /* aligné à 0px du haut */
+    left: 0; /* aligné à 0px de la gauche */
+    }
+    nav  a{
+    padding: 0.5em 2em;
+    color: #fff;
+    text-decoration: none;
+    height: 33px;
+    }
+    nav  a:hover{
+    background: #fda500;
+    }
+    #contenu{
+    border: 2px solid #336699; /* bordure */
+    margin: 40px 0 0 0; /* marges haut droite bas gauche */
+    }
+
+    #profile-img{
+         background-size: cover;
+         background-position: center;
+         max-width: 100%;
+         max-height: 400px;
+    }
+
+    body {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+
+    }
+
+    form{
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        background-image: radial-gradient(circle at 40.93% 83.85%, #daffda 0, #cdffd8 12.5%, #bffbd7 25%, #aff7d6 37.5%, #9df2d5 50%, #8aedd6 62.5%, #76e9d8 75%, #61e4db 87.5%, #4ae0df 100%);
+
+    }
+image-container {
+  position: relative;
+  text-align: center;
+}
+ h2{
+     margin-bottom: 50px;
+     text-align: center;
+ }
